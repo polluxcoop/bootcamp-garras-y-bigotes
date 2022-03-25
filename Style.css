@@ -48,8 +48,8 @@ img {
     height: 70px;
     
 }
-p {
-    width: 514px;
+.img-fondo p {
+    width: auto;
     font-family: 'Alata', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -57,6 +57,12 @@ p {
     line-height: 55px;
     color: #FFFFFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media(min-width: 425px){
+    .img-fondo p {
+        width: 514px;
+    }
 }
  
 button {
