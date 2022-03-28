@@ -9,8 +9,8 @@
 body {
     margin:0;
     padding:0;
-    background:#FFBFBF;
-  }
+    /*background:#FFBFBF;*/
+}
 
 .logo img {
     width: 335px;
@@ -22,7 +22,7 @@ body {
 html{
     overflow-x: hidden;
    
-  }
+}
 
 .img-fondo {
     background-image: url(/img/kristina-yadykina-21NRDbMJF94-unsplash\ 1.png);
@@ -31,12 +31,20 @@ html{
     align-items: center;
     justify-content: center;
     display: flex;
-    height:100vh;
-    width: 100vw;
+    background-position-x: 92%;
     margin:0;
     box-sizing: border-box;
 
 }
+@media (min-width: 425px){
+    .img-fondo{
+        height:100vh;
+    width: 100vw;
+    }
+}
+
+
+
 .container {
     width: 80%;
     /* display: flex;
@@ -53,8 +61,8 @@ img {
     font-family: 'Alata', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
-    line-height: 55px;
+    font-size: 30px;
+    line-height: 41px;
     color: #FFFFFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -62,15 +70,18 @@ img {
 @media(min-width: 425px){
     .img-fondo p {
         width: 514px;
+        font-size: 40px;
+       line-height: 55px;
+
     }
 }
  
 button {
     border :0;
-    width: 221px;
-    height: 53px;
-    left: 149px;
-    top: 595px;
+    width: 153.19px;
+    height: 27.77px;
+    left: 14.9px;
+    top: 6.08px;
     font-family: 'Alata', sans-serif;
     font-weight: 400;
     font-size: 24px;
@@ -78,7 +89,20 @@ button {
     color:#FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-h1 {
+@media (min-width: 425px){
+    button{
+    width: 221px;
+    height: 53px;
+    left: 149px;
+    top: 595px;
+    }
+}
+
+
+
+
+
+.adopta  h1  {
     width: 260px;
     display: inline;
     font-family: 'Pacifico', cursive;
@@ -94,69 +118,52 @@ h1 {
     width: 35.77px;
     height: 34.3px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-
+    display: inline;
 }
-.img  {
+
+.adopta  {
     
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
     background: #FFBFBF;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
 
 }
-
-.img-corazon h1 {
-    display: inline;
-}
-
-
-.img-gato2 img {
-    margin-left:20px;
-    padding:2em;
-    border-radius: 90%;
+.gatitos {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+  }
+  .gatitos img {
     width: 131px;
     height: 131px;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .gatitos img:nth-child(4),
+  .gatitos img:nth-child(5) {
+    display: none;
+  }
+  @media (min-width: 425px) {
+    .adopta {
+      flex-direction: row;
+      gap: 40px;
+    }
+    .gatitos {
+      justify-content: space-between;
+    }
+    .gatitos img:nth-child(4),
+    .gatitos img:nth-child(5) {
+      display: inline-flex;
+    }
 }
 
-.img-gato3 img {
-    padding: 2em;
-    border-radius: 50%;
-    max-width: 10rem;
-    width: 131px;
-    height: 131px;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
-
-}
-.img-gato4 img {
-    padding: 2em;
-    border-radius: 50%;
-    max-width: 10rem;
-    width: 131px;
-    height: 131px;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
-}
-.img-gato5 img {
-    padding: 2em;
-    border-radius: 50%;
-    max-width: 10rem;
-    width: 131px;
-    height: 131px;
-    object-fit: fill;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
-}
-
-.img-gato6 img {
-    padding: 2em;
-    border-radius: 50%;
-    max-width: 10rem;
-    width: 131px;
-    height:131px;
-    object-fit: fill;
-    box-shadow: 0px 0px px rgba(0, 0, 0, 0.25);
-}
 .formulario {
     background-image: url(/img/image\ 2.png);
     background-repeat: no-repeat;
@@ -165,24 +172,35 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height:100vh;
-    width: 100vw;
+    width:auto;
     margin:0;
-    
-
-
 }
+
+@media(min-width: 425px){
+    .formulario {
+        width: 100vw;
+        height: 100vh;
+    }
+}
+ 
+
 form {
-    width: 560px;
+    width: auto;
     margin: auto;
     background: #FFBFBF;
     padding: 10px 20px;
     box-sizing: border-box;
     border: 1px solid #FFBFBF;
-
-
-
+    order:1;
 }
+@media(min-width: 425px){
+    form {
+        width: 560px;
+        order: 0;
+    }
+}
+
+
 input, textarea ,label {
     width:100%;
     margin-bottom: 20px;
@@ -215,8 +233,14 @@ textarea{
 }
 .container-formulario{
     display:grid;
-    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    
     align-items: center;
+}
+@media (min-width: 425px){
+    .container-formulario{
+        grid-template-columns: auto auto;
+    }
 }
 
 .formulario p , .formulario .h1{
@@ -231,8 +255,10 @@ textarea{
     box-sizing: border-box;
     border: 1px solid #ffbfbf;
 }
+
 .text h1 {
     font-family: 'Alata', sans-serif;
+    color: #ffffff;
     width: 367px;
     font-size: 35px;
     line-height: 48px;
@@ -246,6 +272,7 @@ textarea{
     font-size: 31px;
     line-height: 35px;
     text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    color: #FFFFFF;
 }
 
 .icon {
@@ -267,14 +294,7 @@ textarea{
  .icon-inicial1 {
     display: flex;
     justify-content: flex-end;
-
-
-
  }
-.img .container {
-    display:grid;
-    grid-template-columns: repeat( 6 , 1fr);
-}
 
 .icon0 img {
     margin-right: auto;
