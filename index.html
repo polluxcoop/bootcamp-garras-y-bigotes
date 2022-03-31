@@ -7,17 +7,15 @@
      <link rel="stylesheet" href="Style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <script src="jquery-3.6.0.min.js"></script>
     <title>GarrasYBigotes</title>
 </head>
 <body>
-    
+    <section class="">
         <div class="img-fondo">
             <div class="container">
                 <img src="/img/logo garras y bigotes.png" alt="logotipo">
@@ -25,54 +23,66 @@
                 <button type="submit"> ¡Quiero adoptar! </button>
             </div>
         </div>
-
-    <div class="adopta">
-        <div class="img-corazon">
-            <h1>#Adoptá</h1>
-           <img src="/img/Emoji.png" alt="corazon">
-       </div>
-        <div class="gatitos">
-            <img
-            src="img/gato2.jpeg" alt="gatito2"
-             />
-             <img
-            src="/img/gato3.jpeg" alt="gatito3"
-             />
-             <img
-            src="/img/gato4.jpeg" alt="gatito4"
-            />
-            <img
-            src="/img/gato5.jpeg" alt="gatito5"
-            />
-            <img
-            src="/img/gato6.jpeg" alt="gatito6"
-            />
+    </section>
+    <section class="">
+        <div class="adopta">
+             <div class="img-corazon">
+                <h1>#Adoptá</h1>
+                 <img src="/img/Emoji.png" alt="corazon">
+            </div>
+            <div class="gatitos">
+                <img
+                src="img/gato2.jpeg" alt="gatito2"
+                 />
+                 <img
+                src="/img/gato3.jpeg" alt="gatito3"
+                 />
+                 <img
+                src="/img/gato4.jpeg" alt="gatito4"
+                />
+                <img
+                src="/img/gato5.jpeg" alt="gatito5"
+                />
+                <img
+                src="/img/gato6.jpeg" alt="gatito6"
+                />
+            </div>
         </div>
-    </div>
+    </section>
 
+    <section class="">
         <div class="formulario" style="overflow: hidden">
             <div class="container-formulario">
-                <form action="">
+                <form id="form" action="">
                     <label>Nombre y Apellido</label>
-                    <input  type="text" name="Nombre y Apellido" placeholder="Nombre y Apellido ">
+                    <input  type="text"  name="" id="nombreyapellido"  placeholder="Nombre y Apellido "
+                    autocomplete="off"
+                    />
                     <label>E-mail</label>
-                    <input type="text" name="E-mail" placeholder="E-mail">
+                    <input type="text" name="" id="email"  placeholder="E-mail"
+                    autocomplete="off"
+                    />
                     <label>Teléfono</label>
-                    <input type="text" name="Telefono" placeholder="Teléfono">
+                    <input type="text" id="telefono" name=""  placeholder="Teléfono"
+                    autocomplete="off"
+                    />
                     <label>Mensaje</label>
-                    <textarea name="Mensaje" placeholder="Escribe aqui su mensaje"></textarea>
-                    <div class="button">
-                    <button id="button1" type="submit">ENVIAR</button>
+                    <textarea name="" id="Mensaje" cols="10"   placeholder="Escribe aqui su mensaje"></textarea>
+                    <div class="button1">
+                    <button id="button1">ENVIAR</button>
                 </form>
+                <!--<a href="mailto:belenaguirre2422000@gmail.com"  id="button" ></a>-->
             </div>
             <div class="text">
                 <h1 class="h1">¿Querés Adoptar?</h1>
                 <p>Si tenés alguna consulta,envianos un mensaje.Caso contrario,completá <u>Formulario de Adopción</u></p>
             </div>
         </div>
-
+    </section>    
+        
+    <section class="">
         <div class="icon">
-            <div class="container">
+            <div class="container1">
                 <div class="icon-inicial">
                     <div class="icon0">
                         <img src="/img/GyB.png" alt="logo">
@@ -80,17 +90,40 @@
                 </div> 
                 <div class="icon-inicial1">
                     <div class="icon1">
-                        <img src="/img/Vector.png" alt="">
+                        <a href="https://api.whatsapp.com/send?phone=17862013838&text=Hola+quiero+info">
+                            <img src="/img/Vector.png" alt="Whatsapp">
+                        </a>
                     </div>
                     <div class="icon2">
-                        <img src="/img/Vector (1).png" alt="">  
+                        <a href="https://www.instagram.com/garrasybigotesrosario/">
+                            <img src="/img/Vector (1).png" alt="insta"> 
+                        </a>
                     </div>
                     <div class="icon3">
-                        <img src="/img/Vector (2).png" alt="">
+                        <a href="https://www.facebook.com/profile.php?id=100063809495931">
+                            <img src="/img/Vector (2).png" alt="facebook">
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>          
-</body>
+        </div>
+    </section>   
+       <!--<script>
+        const $form = document.querySelector('#form');
+        const $buttonemail = document.querySelector('#button')
+         
+        $form.addEventListener('submit',handleSubmit)
 
+        function handleSubmit(event) {
+            event.preventDefault();
+            const form = new FormData(this);
+            console.log(form.get('name'));
+            $buttonmailto.setAttribute('href', `email:belenaguirre2422000@gmail.com?subject=nombre${form.get('name')}correo${form.get('email')} telefono ${form.get('Telefono')}&body=${form.get('Mensaje')}`);
+            $buttonmailto.click();
+
+        }
+        </script> -->
+
+</body>
+<script src="index.js"></script>
 </html>
