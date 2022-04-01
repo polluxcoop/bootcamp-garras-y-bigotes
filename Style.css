@@ -320,28 +320,33 @@ textarea{
 }
 }*/
 
+.container1{
+    max-width: 1080px;
+}
 
 .container1 img {
     height: 50px;
+    
 }
 
 @media (min-width: 425px){
     .container1 img {
+        display: flex;
             height: 70px;
     }
 
 }
 
-.icon .container1  {
+ .icon .container1  {
     display:flex;
     justify-content: space-between;
+  
 
-
-}
-@media (min-width: 768px) {
+ }
+@media (min-width: 425px) {
     .icon .container1 {
-    display:grid;
-    grid-template-columns: auto auto;
+        width: 979px;
+        padding: 10px;
 }
 }
 
@@ -350,9 +355,16 @@ textarea{
     justify-content: flex-end;
  }
 
-.icon0 img {
+
+
+ .icon0{
+     max-width: 980px;
+ }
+
+/*.icon0 img {
     margin-right: auto;
-}
+}*/
+
 
 
 
