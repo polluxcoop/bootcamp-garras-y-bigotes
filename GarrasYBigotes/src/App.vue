@@ -57,7 +57,7 @@
                             <textarea name="" id="Mensaje" cols="10"   placeholder="Escribe aqui su mensaje" required v-model="form.mensaje"></textarea>
                             <div class="button1">
                            <a :href="`https://api.whatsapp.com/send?phone=5493415320077&text=Hola%20mi%20nombre%20es%20:${form.nombreyapellido},%20${form.email},%20${form.telefono},asunto:%20${form.mensaje}`" target="_blank">
-                             <b-button  id="button1">ENVIAR</b-button>
+                             <button type="button" id="button1">ENVIAR</button>
                             </a>
                             </div>   
                         </form>
@@ -148,9 +148,9 @@ body {
   
 
 .container img{
-    margin-left: -67px;
+margin-left: -70px;;
 }
-@media (min-width: 425px) {
+@media (min-width: 600px) {
    .container img{
      margin-left: auto;
    height: 84px;
@@ -179,12 +179,11 @@ html{
     display: flex;
     background-position-x: 92%;
     margin:0;
-    height:100vh;
     padding:89px;
     box-sizing: border-box;
 
 }
-@media (min-width: 425px){
+@media (min-width: 600px){
     .img-fondo{
     height:100vh;
     width: 100vw;
@@ -199,6 +198,13 @@ html{
      background-position-x: 65%;
     }
 }
+@media (min-width: 1092px) {
+    .img-fondo{
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+}
+
 
 
 
@@ -225,7 +231,7 @@ img {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-@media(min-width: 425px){
+@media(min-width: 600px){
     .img-fondo p {
         width:  384px;
         font-size: auto;
@@ -268,7 +274,7 @@ button:hover {
     opacity: 0.8;
     background-color:#e9a8a8;
   }
-@media (min-width: 425px){
+@media (min-width: 600px){
     button {
     width: 221px;
     height: 53px;
@@ -334,7 +340,7 @@ button:hover {
   .gatitos img:nth-child(5) {
     display: none;
   }
-  @media (min-width: 425px) {
+  @media (min-width: 600px) {
     .adopta {
       flex-direction: row;
       gap: 40px;
@@ -383,7 +389,7 @@ button:hover {
     margin:0;
 }
 
-@media(min-width: 425px){
+@media(min-width: 600px){
     .formulario {
         width: 100vw;
         height: 100vh;
@@ -407,11 +413,11 @@ form {
     border: 1px solid #FFBFBF;
     order:1;
 }
-@media(min-width: 425px){
+@media(min-width: 600px){
     form {
         margin: auto;
         max-width: 417px;
-        order:0;
+       
     }
 }
 @media(min-width: 768px){
@@ -441,7 +447,7 @@ input, textarea ,label {
 
 
 }
-@media (min-width: 425px){
+@media (min-width: 600px){
 .input, textarea ,.label{
     font-size: 21px;
     border-radius: 3px;
@@ -464,7 +470,7 @@ input, textarea ,label {
     color:#FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
- @media (min-width: 425px){
+ @media (min-width: 600px){
     #button1 {
     width: 221px;
     height: 53px;
@@ -496,12 +502,13 @@ textarea{
 .container-formulario{
     display:grid;
     grid-template-rows: auto auto;
-    
     align-items: center;
+    order:1;
 }
-@media (min-width: 425px){
+@media (min-width: 600px){
     .container-formulario{
         grid-template-columns: auto auto;
+         order:0;
     }
 }
 
@@ -512,10 +519,19 @@ textarea{
 }
 
 .text {
-    padding: 20px;
+    padding: 77px;
+    margin: 27px;
     background-color:#FFBFBF;
     box-sizing: border-box;
     border: 1px solid #ffbfbf;
+}
+@media (min-width:600px){
+    .text{
+        order: 0;
+        padding: 20px;
+        margin: 0;
+    }
+   
 }
 
 .text h1 {
@@ -540,10 +556,12 @@ textarea{
     text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     color: #FFFFFF;
 }
-@media (min-width: 425px){
+
+@media (min-width: 600px){
     .text p {
      line-height: auto;
      font-size: auto;
+     
     }
 }
 
@@ -584,7 +602,7 @@ textarea{
     
 }
 
-@media (min-width: 425px){
+@media (min-width: 600px){
     .container1 img {
         display: flex;
             height: 70px;
@@ -598,7 +616,7 @@ textarea{
   
 
  }
-@media (min-width: 425px) {
+@media (min-width: 600px) {
     .icon .container1 {
         width: 979px;
         padding: 10px;
